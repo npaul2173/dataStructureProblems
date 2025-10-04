@@ -1,5 +1,5 @@
 import { createBinaryTree } from "./createBinaryTree.js";
-const inputArray = [1, 2, 3, 4, 5, 6];
+const inputArray = [1, 2, 3];
 const inputRoot = createBinaryTree(inputArray);
 
 console.log(inputRoot);
@@ -17,7 +17,7 @@ function levelOrderTraversal(root) {
     // Get the node value
     let node = queue.shift();
     // Push the actual value of the root inside the results array
-    results.push(node.root);
+    results.push(node.value);
 
     if (node.left) queue.push(node.left);
     if (node.right) queue.push(node.right);

@@ -1,12 +1,13 @@
 class Node {
   constructor(value) {
-    this.root = value;
+    this.value = value;
     this.left = null;
     this.right = null;
   }
 }
 
-function createBinaryTree(inputArr) {
+function createBinaryTree(inputArr = []) {
+  if (!inputArr || !inputArr.length) return null;
   let root = new Node(inputArr[0]);
   let queue = [root];
   let pointer = 1;
@@ -31,4 +32,4 @@ function createBinaryTree(inputArr) {
   return root;
 }
 
-module.exports = { createBinaryTree };
+export { createBinaryTree };

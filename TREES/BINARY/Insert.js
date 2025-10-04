@@ -8,16 +8,16 @@ class Node {
 
 class BST {
   constructor() {
-    this.root = null;
+    this.value = null;
   }
   insert(value) {
     const newNode = new Node(value);
-    if (!this.root) {
-      this.root = newNode;
+    if (!this.value) {
+      this.value = newNode;
     }
   }
   insertNode(node, newNode) {
-    if (newNode.value < node.value) {
+    if (newnode.value < node.value) {
       if (node.left === null) node.left = newNode;
       else this.insertNode(node.left, newNode);
     } else {

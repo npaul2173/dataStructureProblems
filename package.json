@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git@github.com-personal:npaul2173/dataStructureProblems.git"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "description": ""

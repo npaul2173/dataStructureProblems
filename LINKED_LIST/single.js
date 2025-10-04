@@ -27,12 +27,12 @@ class Node {
 //  Linked List code
 class LinkedList {
   constructor() {
-    this.root = null;
+    this.value = null;
   }
 
   addNode(value) {
     const node = new Node(value);
-    if (this.root) {
+    if (this.value) {
       const lastNode = this.getLastNode();
       lastNode.next = node;
       console.log(
@@ -40,13 +40,13 @@ class LinkedList {
         lastNode.data
       );
     } else {
-      this.root = node;
-      console.log("🚀 Root Created --> ", this.root);
+      this.value = node;
+      console.log("🚀 Root Created --> ", this.value);
     }
   }
 
   getLastNode() {
-    let lastNode = this.root;
+    let lastNode = this.value;
     while (lastNode.next) {
       lastNode = lastNode.next;
     }
@@ -54,8 +54,8 @@ class LinkedList {
   }
 
   getMiddleNode() {
-    let slowNode = this.root;
-    let fastNode = this.root;
+    let slowNode = this.value;
+    let fastNode = this.value;
     while (fastNode !== null && fastNode.next !== null) {
       slowNode = slowNode.next;
       fastNode = fastNode.next.next;
@@ -65,7 +65,7 @@ class LinkedList {
 
   reverseList() {
     let previous = null;
-    let current = this.root;
+    let current = this.value;
 
     while (current !== null) {
       let nextNode = current.next;
@@ -79,7 +79,7 @@ class LinkedList {
   removeDuplicates() {
     const track = new Set();
 
-    let curr = this.root;
+    let curr = this.value;
     let prev = null;
     while (curr) {
       //   console.log(curr);
@@ -95,7 +95,7 @@ class LinkedList {
   }
 
   traverse() {
-    let curr = this.root;
+    let curr = this.value;
     while (curr) {
       console.log("Node 👉 ", curr.data);
       curr = curr.next;
