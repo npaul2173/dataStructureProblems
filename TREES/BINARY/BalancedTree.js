@@ -1,4 +1,4 @@
-const { createBinaryTree } = require("./createBinaryTree");
+import { createBinaryTree } from "./createBinaryTree.js";
 let inputArray = [1, 2, 3, 4, 5, 6, 7];
 // let inputArray = [1, 2, 3, null, 5, null, 4];
 
